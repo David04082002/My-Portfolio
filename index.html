@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="header">
+      <div class="nav">
+        <a href="#">Home</a>
+        <a href="#awards">Awards</a>
+        <a href="#goals">Goals</a>
+        <a href="#myworks">My Works</a>
+      </div>
+      <div class="details-container">
+        <p>GIANDAVID FERRER</p>
+        <p>Art & Programming</p>
+      </div>
+    </div>
+    <div class="cover-letter">
+      <p>Cover Letter</p>
+      <p>
+        Unlocking opportunities through my passion for innovation and dedication
+        to excellence.
+      </p>
+      <div class="cv-container"></div>
+    </div>
+    <div class="resume">
+      <p>Resume</p>
+      <p>Passionate and driven professional ready to make an impact.</p>
+      <div class="resume-container"></div>
+    </div>
+    <div class="awards" id="awards">
+      <p>Awards</p>
+      <div>
+        <div>
+          <span>Network Foundations</span>
+          <button class="view-btn" onclick="openModal('modal1')">View</button>
+        </div>
+        <div>
+          <span>Database Foundations</span>
+          <button class="view-btn" onclick="openModal('modal2')">View</button>
+        </div>
+      </div>
+    </div>
+    <div id="modal1" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('modal1')">&times;</span>
+        <img src="assets/certificate-1.png" alt="Image 1" />
+      </div>
+    </div>
+    <div id="modal2" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('modal2')">&times;</span>
+        <img src="assets/certificate1-1.png" alt="Image 2" />
+      </div>
+    </div>
+    <div class="goals" id="goals">
+      <p>Goals and Plans</p>
+      <p>
+        My primary goal is to further develop my professional skills and
+        expertise. I plan to achieve this by enrolling in relevant online
+        courses and attending workshops to stay up-to-date with the latest
+        industry trends. Additionally, I aim to strengthen my network by
+        actively participating in industry events and connecting with
+        professionals in my field. In the coming months, I also plan to take on
+        more challenging projects at work to gain hands-on experience and
+        enhance my problem-solving abilities.
+      </p>
+      <hr />
+      <p>
+        My ultimate goal is to assume a leadership role within my organization
+        or industry. To achieve this, I intend to pursue advanced degrees or
+        certifications that will provide me with the knowledge and
+        qualifications needed for higher-level positions. Furthermore, I aspire
+        to become a mentor to junior professionals, sharing my expertise and
+        guiding them in their careers.
+      </p>
+    </div>
+    <div class="myworks" id="myworks">
+      <p class="works-title">My Works</p>
+      <p>Explore my portfolio of creative endeavors.</p>
+      <p class="title">Coding Projects</p>
+      <div class="projects">
+        <div class="card">
+          <img src="assets/TimeApp.png" alt="Card 1" />
+          <div class="code-details">
+            <p>World Time App</p>
+            <button class="view-btn" id="worldtime">Source Code</button>
+          </div>
+        </div>
+        <div class="card">
+          <img src="assets/Ytclone.png" alt="Card 1" />
+          <div class="code-details">
+            <p>Youtube Clone</p>
+            <button class="view-btn" id="ytclone">Source Code</button>
+          </div>
+        </div>
+      </div>
+      <p class="title">Typography</p>
+      <div class="typography">
+        <div class="card">
+          <img src="assets/Art.png" alt="Card 1" />
+        </div>
+        <div class="card">
+          <img src="assets/Sprout.png" alt="Card 2" />
+        </div>
+        <div class="card">
+          <img src="assets/Puzzle.png" alt="Card 3" />
+        </div>
+        <div class="card">
+          <img src="assets/Comparison.png" alt="Card 4" />
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <p>
+        You already know about me, now I'm eager to learn more about your
+        organization. Contact me, and let's explore how I can make a meaningful
+        contribution to your team!
+      </p>
+    </div>
+    <script>
+      function openModal(modalId) {
+        var modal = document.getElementById(modalId);
+        modal.style.display = "block";
+        var modalContent = modal.querySelector(".modal-content");
+        modalContent.style.maxWidth = "90%";
+        modalContent.style.maxHeight = "90%";
+
+        modal.addEventListener("click", function (event) {
+          if (event.target === modal) {
+            closeModal(modalId);
+          }
+        });
+      }
+
+      function closeModal(modalId) {
+        document.getElementById(modalId).style.display = "none";
+      }
+
+      document
+        .getElementById("worldtime")
+        .addEventListener("click", function () {
+          window.open(
+            "https://github.com/David04082002/world-time-app",
+            "_blank"
+          );
+        });
+
+      document
+        .getElementById("ytclone")
+        .addEventListener("click", function () {
+          window.open(
+            "https://github.com/David04082002/Youtube_clone",
+            "_blank"
+          );
+        });
+    </script>
+  </body>
+</html>
