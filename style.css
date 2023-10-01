@@ -1,6 +1,7 @@
 body {
   background-color: white;
   margin: 0px;
+  scroll-behavior: smooth;
 }
 
 a {
@@ -61,8 +62,6 @@ p {
 }
 
 .cv-container {
-  background-size: cover;
-  background-position: top;
   width: 700px;
   margin-top: 50px;
 }
@@ -92,8 +91,6 @@ p {
 }
 
 .resume-container {
-  background-size: cover;
-  background-position: top;
   width: 700px;
   margin-top: 50px;
 }
