@@ -61,12 +61,15 @@ p {
 }
 
 .cv-container {
-  background-image: url(assets/_Cover-Letter-1.png);
   background-size: cover;
   background-position: top;
   width: 700px;
-  height: 900px;
   margin-top: 50px;
+}
+
+.cv-container img {
+  max-width: 100%;
+  height: auto; 
 }
 
 /* Resume */
@@ -89,12 +92,15 @@ p {
 }
 
 .resume-container {
-  background-image: url(assets/_Resume-1.png);
   background-size: cover;
   background-position: top;
   width: 700px;
-  height: 950px;
   margin-top: 50px;
+}
+
+.resume img {
+  max-width: 100%; /* Ensure images don't exceed the width of their containers */
+  height: auto; 
 }
 
 /* Awards */
